@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj64cj516grky"]
+
+[ext_resource type="Texture2D" uid="uid://c6tahyfpx1c1y" path="res://assets/sky.png" id="1_ynf42"]
+[ext_resource type="PackedScene" uid="uid://civq5pf2i3l5w" path="res://startgame_button.tscn" id="2_kj28g"]
+
+[node name="startmenu" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(250, 150)
+texture = ExtResource("1_ynf42")
+
+[node name="Control" parent="." instance=ExtResource("2_kj28g")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+offset_left = 257.0
+offset_top = 158.0
+offset_right = 257.0
+offset_bottom = 158.0
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true

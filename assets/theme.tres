@@ -1,0 +1,34 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://d0kqpuio6hw8v"]
+
+[ext_resource type="FontFile" uid="uid://c7o5odwberpw0" path="res://assets/connection_ii/ConnectionII.otf" id="1_5x3i2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v437m"]
+bg_color = Color(0.03988966, 0.44881403, 0.49824935, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0veaj"]
+bg_color = Color(0.07766084, 0.675399, 0.74723136, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[resource]
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("1_5x3i2")
+Button/styles/hover = SubResource("StyleBoxFlat_v437m")
+Button/styles/normal = SubResource("StyleBoxFlat_0veaj")
+RichTextLabel/fonts/normal_font = ExtResource("1_5x3i2")

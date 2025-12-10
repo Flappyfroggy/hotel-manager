@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://civq5pf2i3l5w"]
+
+[ext_resource type="Script" uid="uid://vritixn4bkuk" path="res://startgame.gd" id="1_71sr1"]
+[ext_resource type="Theme" uid="uid://d0kqpuio6hw8v" path="res://assets/theme.tres" id="2_71sr1"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_71sr1")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = 89.0
+offset_right = 89.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_71sr1")
+text = "start"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.0
+offset_top = -109.0
+offset_right = 169.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_71sr1")
+theme_override_font_sizes/normal_font_size = 50
+text = "hotel management simulator"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
