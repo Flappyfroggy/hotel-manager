@@ -1,10 +1,33 @@
 extends Node2D
 @onready var bed = $"/root/node2d/layer_holder/bed"
+@onready var bookshelf = $"/root/node2d/layer_holder/bookshelf"
+@onready var sign = $"/root/node2d/layer_holder/sign"
 @onready var animation = $AnimationPlayer
+@onready var tutorial_pt1 = $animation
+@onready var tutorial_pt2 = $animation_pt2
 func _ready():
-	bed.hide()
+	if not e.bought_bed:
+		bed.hide()
+	if not e.bought_bookshelf:
+		bookshelf.hide()
+	if not e.bought_sign:
+		sign.hide()
 	if e.tutorial:
 		animation.play("tutorial")
+	if not e.tutorial:
+		tutorial_pt1.hide()
+		tutorial_pt2.hide()
 func _process(_float) -> void:
-	if e.add_bed:
+	if e.add_bed and not e.bought_bed:
 		bed.show()
+		e.bought_bed = true
+		if e.tutorial:
+			tutorial_pt1.hide()
+			animation.play("tutorial_pt2")
+			e.tutorial = false
+	if e.add_bookshelf and not e.bought_bookshelf and not e.tutorial:
+		e.bought_bookshelf = true
+		bookshelf.show()
+	if e.add_sign and not e.bought_sign and not e.tutorial:
+		e.boughtsign = true
+		sign.show()

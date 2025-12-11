@@ -1,5 +1,10 @@
 extends Node
 var hotel_intro_ended:bool = false
 var add_bed:bool = false
+var add_bookshelf:bool = false
+var add_sign: bool = false
 var money = int(0)
 var tutorial:bool = true
+var bought_bed:bool = false
+var bought_bookshelf: bool = false
+var bought_sign: bool = false
