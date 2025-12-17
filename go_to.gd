@@ -7,9 +7,9 @@ func _on_inside_pressed() -> void:
 
 
 func _on_advertise_pressed() -> void:
-	e.advertisement += 10
+	e.advertisement += 5
 	print(e.advertisement)
 func _process(delta):
 	if e.advertisement > 0:
-		e.advertisement -= 20 * delta
-	
+		e.advertisement -= 15 * delta
+		return
