@@ -1,8 +1,8 @@
 extends Node2D
-@onready var bed = $"/root/node2d/layer_holder/bed"
-@onready var bookshelf = $"/root/node2d/layer_holder/bookshelf"
+@onready var bed = $layer_holder/bed
+@onready var bookshelf = $layer_holder/bookshelf
 @warning_ignore("shadowed_global_identifier")
-@onready var sign = $"/root/node2d/layer_holder/sign"
+@onready var sign = $layer_holder/sign
 @onready var animation = $AnimationPlayer
 @onready var tutorial_pt1 = $animation
 @onready var tutorial_pt2 = $animation_pt2

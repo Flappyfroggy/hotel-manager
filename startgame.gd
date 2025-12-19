@@ -1,5 +1,16 @@
 extends Control
-
+@onready var transition = $transition_pt1/AnimationPlayer
+@onready var sprite = $transition_pt1/Sprite2D
+var b := false
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://hotel_intro.tscn")
-	e.money += 1000
+	if not b:
+		sprite.show()
+		sprite.position = Vector2(0,0)
+		sprite.scale = Vector2(0.6,0.6)
+		transition.play("transition1")
+		e.money += 1000
+		b = true
+func _process(delta: float) -> void:
+	if e.transition_finish:
+		e.transition_finish = false
+		get_tree().change_scene_to_file("res://hotel_intro.tscn")

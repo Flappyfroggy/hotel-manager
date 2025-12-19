@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjfu5spu6qyjp"]
+
+[ext_resource type="AudioStream" uid="uid://cai4ci63bt6q4" path="res://assets/Troubadeck 02 Leapfrogs.ogg" id="1_p1osb"]
+
+[node name="bg_music" type="AudioStreamPlayer"]
+stream = ExtResource("1_p1osb")
+autoplay = true

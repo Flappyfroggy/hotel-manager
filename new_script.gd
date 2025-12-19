@@ -10,3 +10,4 @@ var bought_bookshelf: bool = false
 var bought_sign: bool = false
 var advertisement = int(0)
 var customers = int(0)
+var transition_finish := false

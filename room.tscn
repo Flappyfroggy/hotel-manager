@@ -1,0 +1,275 @@
+[gd_scene load_steps=18 format=4 uid="uid://buf3n8v7q1su2"]
+
+[ext_resource type="Script" uid="uid://dcodpfkp74mft" path="res://node_2d.gd" id="1_8cv3p"]
+[ext_resource type="TileSet" uid="uid://ljej2g64q7vb" path="res://assets/tile.tres" id="2_01y1d"]
+[ext_resource type="Texture2D" uid="uid://dyi8exq5vc85k" path="res://assets/bed_tile.png" id="3_42v8c"]
+[ext_resource type="Texture2D" uid="uid://iv5ow3gwreef" path="res://assets/bookshelf.png" id="4_mb7s7"]
+[ext_resource type="Texture2D" uid="uid://d01nav4jrsw8q" path="res://assets/sign.png" id="5_xorjj"]
+[ext_resource type="Theme" uid="uid://d0kqpuio6hw8v" path="res://assets/theme.tres" id="6_xwbdb"]
+[ext_resource type="Texture2D" uid="uid://bh1ctf4v6hqtq" path="res://assets/ARROW.png" id="7_voycu"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0hol4"]
+texture = ExtResource("3_42v8c")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_q6r6c"]
+tile_shape = 1
+tile_layout = 5
+tile_offset_axis = 1
+tile_size = Vector2i(32, 16)
+sources/0 = SubResource("TileSetAtlasSource_0hol4")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4d7sh"]
+texture = ExtResource("4_mb7s7")
+texture_region_size = Vector2i(64, 96)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, -30)
+
+[sub_resource type="TileSet" id="TileSet_ir8iy"]
+tile_shape = 1
+tile_layout = 5
+tile_offset_axis = 1
+tile_size = Vector2i(32, 16)
+sources/0 = SubResource("TileSetAtlasSource_4d7sh")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ir8iy"]
+texture = ExtResource("5_xorjj")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, -9)
+
+[sub_resource type="TileSet" id="TileSet_hqns4"]
+tile_shape = 1
+tile_layout = 5
+tile_offset_axis = 1
+tile_size = Vector2i(32, 16)
+sources/0 = SubResource("TileSetAtlasSource_ir8iy")
+
+[sub_resource type="Animation" id="Animation_rj586"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("animation/RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("animation/Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-189, -205)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("animation/Sprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.68792963]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("animation_pt2/RichTextLabel2:visible_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("animation_pt2/Sprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(137, 309)]
+}
+
+[sub_resource type="Animation" id="Animation_d21ai"]
+resource_name = "tutorial"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("animation/RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7.03),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("animation/Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(7.0666666, 7.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-189, -205), Vector2(223.00002, -161)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("animation/Sprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333333, 1.47, 2.74, 4.2, 5.45, 6.68),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.68792963, 2.163207, 0.93029046, 2.1081767, 0.97305655, 0.31941175]
+}
+
+[sub_resource type="Animation" id="Animation_4d7sh"]
+resource_name = "tutorial_pt2"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("animation_pt2/RichTextLabel2:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5.4333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("animation_pt2/Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(5.4947777, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(137, 309), Vector2(594, -185)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4d7sh"]
+_data = {
+&"RESET": SubResource("Animation_rj586"),
+&"tutorial": SubResource("Animation_d21ai"),
+&"tutorial_pt2": SubResource("Animation_4d7sh")
+}
+
+[node name="node2d" type="Node2D"]
+position = Vector2(250, 356)
+script = ExtResource("1_8cv3p")
+
+[node name="layer_holder" type="Node2D" parent="."]
+scale = Vector2(0.9, 0.9)
+
+[node name="floor" type="TileMapLayer" parent="layer_holder"]
+tile_map_data = PackedByteArray("AAD//wAAAgAAAAEAAAD//wEAAgAAAAEAAAAAAAEAAgAAAAEAAAD//wIAAgAAAAEAAAAAAAIAAgAAAAEAAAD//wMAAgAAAAEAAAAAAAMAAgAAAAEAAAABAAMAAgAAAAEAAAABAAIAAgAAAAEAAAABAAEAAgAAAAEAAAAAAAAAAgAAAAEAAAABAAAAAgAAAAEAAAACAAEAAgAAAAEAAAACAAIAAgAAAAEAAAACAAMAAgAAAAEAAAACAAAAAgAAAAEAAAD//wQAAgAAAAEAAAAAAAQAAgAAAAEAAAABAAQAAgAAAAEAAAACAAQAAgAAAAEAAAADAAQAAgAAAAEAAAADAAMAAgAAAAEAAAADAAIAAgAAAAEAAAADAAEAAgAAAAEAAAADAAAAAgAAAAEAAAD+////AgAAAAEAAAD+/wAAAgAAAAEAAAD/////AgAAAAEAAAAAAP//AgAAAAEAAAABAP//AgAAAAEAAAACAP//AgAAAAEAAAADAP//AgAAAAEAAAD+/wEAAgAAAAEAAAD+/wIAAgAAAAEAAAD+/wMAAgAAAAEAAAD+/wQAAgAAAAEAAAD9/wQAAgAAAAEAAAD9/wMAAgAAAAEAAAD9/wIAAgAAAAEAAAD9/wEAAgAAAAEAAAD9/wAAAgAAAAEAAAD9////AgAAAAEAAAD9//7/AgAAAAEAAAD+//7/AgAAAAEAAAD///7/AgAAAAEAAAAAAP7/AgAAAAEAAAABAP7/AgAAAAEAAAACAP7/AgAAAAEAAAADAP7/AgAAAAEAAAD8//3/AgAAAAEAAAD8//7/AgAAAAEAAAD8////AgAAAAEAAAD8/wAAAgAAAAEAAAD8/wEAAgAAAAEAAAD8/wIAAgAAAAEAAAD8/wMAAgAAAAEAAAD8/wQAAgAAAAEAAAD9//3/AgAAAAEAAAD+//3/AgAAAAEAAAD///3/AgAAAAEAAAAAAP3/AgAAAAEAAAABAP3/AgAAAAEAAAADAP3/AgAAAAEAAAACAP3/AgAAAAEAAAD7//z/AgAAAAEAAAD7//3/AgAAAAEAAAD7//7/AgAAAAEAAAD7////AgAAAAEAAAD7/wAAAgAAAAEAAAD7/wEAAgAAAAEAAAD7/wIAAgAAAAEAAAD7/wMAAgAAAAEAAAD7/wQAAgAAAAEAAAD8//z/AgAAAAEAAAD9//z/AgAAAAEAAAD+//z/AgAAAAEAAAD///z/AgAAAAEAAAAAAPz/AgAAAAEAAAABAPz/AgAAAAEAAAACAPz/AgAAAAEAAAADAPz/AgAAAAEAAAA=")
+tile_set = ExtResource("2_01y1d")
+
+[node name="walllayer1" type="TileMapLayer" parent="layer_holder"]
+tile_map_data = PackedByteArray("AAD6//v/AgAAAAAAAAD6//z/AgAAAAAAAAD6//3/AgAAAAAAAAD6//7/AgAAAAAAAAD6////AgAAAAAAAAD6/wAAAgAAAAAAAAD6/wEAAgAAAAAAAAD6/wIAAgAAAAAAAAD6/wMAAgAAAAAAAAD7//v/AgAAAAAAAAD8//v/AgAAAAAAAAD9//v/AgAAAAAAAAD+//v/AgAAAAAAAAD///v/AgAAAAAAAAAAAPv/AgAAAAAAAAABAPv/AgAAAAAAAAACAPv/AgAAAAAAAAA=")
+tile_set = ExtResource("2_01y1d")
+
+[node name="walllayer2" type="TileMapLayer" parent="layer_holder"]
+tile_map_data = PackedByteArray("AAD5//r/AgAAAAAAAAD5//v/AgAAAAAAAAD5//z/AgAAAAAAAAD5//3/AgAAAAAAAAD5//7/AgAAAAAAAAD5////AgAAAAAAAAD5/wAAAgAAAAAAAAD5/wEAAgAAAAAAAAD5/wIAAgAAAAAAAAD6//r/AgAAAAAAAAD7//r/AgAAAAAAAAD8//r/AgAAAAAAAAD9//r/AgAAAAAAAAD+//r/AgAAAAAAAAD///r/AgAAAAAAAAAAAPr/AgAAAAAAAAABAPr/AgAAAAAAAAA=")
+tile_set = ExtResource("2_01y1d")
+
+[node name="walllayer3" type="TileMapLayer" parent="layer_holder"]
+tile_map_data = PackedByteArray("AAD4//n/AgAAAAAAAAD4//r/AgAAAAAAAAD4//v/AgAAAAAAAAD4//z/AgAAAAAAAAD4//3/AgAAAAAAAAD4//7/AgAAAAAAAAD4////AgAAAAAAAAD4/wAAAgAAAAAAAAD4/wEAAgAAAAAAAAD5//n/AgAAAAAAAAD6//n/AgAAAAAAAAD7//n/AgAAAAAAAAD8//n/AgAAAAAAAAD9//n/AgAAAAAAAAD+//n/AgAAAAAAAAD///n/AgAAAAAAAAAAAPn/AgAAAAAAAAA=")
+tile_set = ExtResource("2_01y1d")
+
+[node name="walllayer4" type="TileMapLayer" parent="layer_holder"]
+tile_map_data = PackedByteArray("AAD3//j/AgAAAAAAAAD3//n/AgAAAAAAAAD3//r/AgAAAAAAAAD3//v/AgAAAAAAAAD3//z/AgAAAAAAAAD3//3/AgAAAAAAAAD3//7/AgAAAAAAAAD3////AgAAAAAAAAD3/wAAAgAAAAAAAAD4//j/AgAAAAAAAAD5//j/AgAAAAAAAAD6//j/AgAAAAAAAAD7//j/AgAAAAAAAAD8//j/AgAAAAAAAAD9//j/AgAAAAAAAAD+//j/AgAAAAAAAAD///j/AgAAAAAAAAA=")
+tile_set = ExtResource("2_01y1d")
+
+[node name="walllayer5" type="TileMapLayer" parent="layer_holder"]
+tile_map_data = PackedByteArray("AAD2//f/AgAAAAAAAAD2//j/AgAAAAAAAAD2//n/AgAAAAAAAAD2//r/AgAAAAAAAAD2//v/AgAAAAAAAAD2//z/AgAAAAAAAAD2//3/AgAAAAAAAAD2//7/AgAAAAAAAAD2////AgAAAAAAAAD3//f/AgAAAAAAAAD4//f/AgAAAAAAAAD5//f/AgAAAAAAAAD6//f/AgAAAAAAAAD7//f/AgAAAAAAAAD8//f/AgAAAAAAAAD9//f/AgAAAAAAAAD+//f/AgAAAAAAAAA=")
+tile_set = ExtResource("2_01y1d")
+
+[node name="walllayer6" type="TileMapLayer" parent="layer_holder"]
+tile_map_data = PackedByteArray("AAD1//b/AgAAAAAAAAD1//f/AgAAAAAAAAD1//j/AgAAAAAAAAD1//n/AgAAAAAAAAD1//r/AgAAAAAAAAD1//v/AgAAAAAAAAD1//z/AgAAAAAAAAD1//3/AgAAAAAAAAD1//7/AgAAAAAAAAD2//b/AgAAAAAAAAD3//b/AgAAAAAAAAD4//b/AgAAAAAAAAD5//b/AgAAAAAAAAD6//b/AgAAAAAAAAD7//b/AgAAAAAAAAD8//b/AgAAAAAAAAD9//b/AgAAAAAAAAA=")
+tile_set = ExtResource("2_01y1d")
+
+[node name="bed" type="TileMapLayer" parent="layer_holder"]
+tile_map_data = PackedByteArray("AAD+//3/AAAAAAAAAAD///3/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_q6r6c")
+
+[node name="bookshelf" type="TileMapLayer" parent="layer_holder"]
+tile_map_data = PackedByteArray("AAD4//r/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_ir8iy")
+
+[node name="sign" type="TileMapLayer" parent="layer_holder"]
+tile_map_data = PackedByteArray("AAD4////AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_hqns4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_4d7sh")
+}
+
+[node name="animation" type="Node2D" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="animation"]
+offset_left = -224.0
+offset_top = -349.0
+offset_right = 213.0
+offset_bottom = -278.0
+theme = ExtResource("6_xwbdb")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 18
+text = "This is your first room available to your guests. Customize it and add more furniture to get better customer reviews and tips."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="animation"]
+position = Vector2(-189, -205)
+rotation = 0.68792963
+scale = Vector2(1.0702649, 1.0328202)
+texture = ExtResource("7_voycu")
+
+[node name="animation_pt2" type="Node2D" parent="."]
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="animation_pt2"]
+offset_left = -238.0
+offset_top = -347.0
+offset_right = 274.0
+offset_bottom = -238.0
+theme = ExtResource("6_xwbdb")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 17
+text = "now that you've bought a bed, you can officially open to customers. beware though: customers will give negative reviews quickly if the room is too bare. Better get new furnishing soon!"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="animation_pt2"]
+position = Vector2(137, 309)
+texture = ExtResource("7_voycu")

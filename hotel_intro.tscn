@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://diixox03lkjy6"]
+[gd_scene load_steps=4 format=3 uid="uid://diixox03lkjy6"]
 
 [ext_resource type="Texture2D" uid="uid://b4t3txh7jas1r" path="res://assets/hotel inside.png" id="1_al2m1"]
 [ext_resource type="Script" uid="uid://g4j3sv57ihty" path="res://hotel_intro.gd" id="1_kqu2y"]
+[ext_resource type="PackedScene" uid="uid://d0ixdf70ovu43" path="res://transition_pt_1.tscn" id="3_56wrq"]
 
 [node name="hotel_intro" type="Node2D"]
 script = ExtResource("1_kqu2y")
@@ -10,3 +11,5 @@ script = ExtResource("1_kqu2y")
 position = Vector2(500, 299)
 scale = Vector2(2, 2.0066667)
 texture = ExtResource("1_al2m1")
+
+[node name="transition_pt1" parent="." instance=ExtResource("3_56wrq")]

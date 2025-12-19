@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://civq5pf2i3l5w"]
+[gd_scene load_steps=4 format=3 uid="uid://civq5pf2i3l5w"]
 
 [ext_resource type="Script" uid="uid://vritixn4bkuk" path="res://startgame.gd" id="1_71sr1"]
 [ext_resource type="Theme" uid="uid://d0kqpuio6hw8v" path="res://assets/theme.tres" id="2_71sr1"]
+[ext_resource type="PackedScene" uid="uid://d0ixdf70ovu43" path="res://transition_pt_1.tscn" id="3_hfxia"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -45,5 +46,7 @@ grow_vertical = 2
 theme = ExtResource("2_71sr1")
 theme_override_font_sizes/normal_font_size = 100
 text = "hotel management simulator"
+
+[node name="transition_pt1" parent="." instance=ExtResource("3_hfxia")]
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
