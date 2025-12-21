@@ -1,8 +1,120 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2p2ukiycl6rt"]
+[gd_scene load_steps=10 format=3 uid="uid://b2p2ukiycl6rt"]
 
 [ext_resource type="Script" uid="uid://dlqm11pjtyxxn" path="res://hotel_outside.gd" id="1_g7t26"]
 [ext_resource type="Texture2D" uid="uid://b4t3txh7jas1r" path="res://assets/hotel inside.png" id="1_i0lhx"]
 [ext_resource type="PackedScene" uid="uid://bnkoxifi4xu0c" path="res://go_to.tscn" id="3_ske0d"]
+[ext_resource type="PackedScene" uid="uid://d0ixdf70ovu43" path="res://transition_pt_1.tscn" id="4_ssxiv"]
+[ext_resource type="Texture2D" uid="uid://bh1ctf4v6hqtq" path="res://assets/ARROW.png" id="5_mya2a"]
+[ext_resource type="Theme" uid="uid://d0kqpuio6hw8v" path="res://assets/theme.tres" id="6_bxetd"]
+
+[sub_resource type="Animation" id="Animation_tw17u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tutorial/RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("tutorial/Sprite2D2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-94, 286)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("tutorial/RichTextLabel2:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("tutorial/Sprite2D2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_2ygdk"]
+resource_name = "tutorial"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tutorial/RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.9333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("tutorial/Sprite2D2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.9, 4.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-94, 286), Vector2(733, 496.00003), Vector2(716.99994, 96.000046)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("tutorial/RichTextLabel2:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.14, 4.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("tutorial/Sprite2D2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3.1, 3.7666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.2889416, 0.13292216, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s1hc8"]
+_data = {
+&"RESET": SubResource("Animation_tw17u"),
+&"tutorial": SubResource("Animation_2ygdk")
+}
 
 [node name="hotel_outside" type="Node2D"]
 script = ExtResource("1_g7t26")
@@ -24,5 +136,41 @@ offset_bottom = 300.0
 [node name="advertisements" type="Timer" parent="."]
 one_shot = true
 
+[node name="transition_pt1" parent="." instance=ExtResource("4_ssxiv")]
+
+[node name="tutorial" type="Node2D" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="tutorial"]
+position = Vector2(-94, 286)
+texture = ExtResource("5_mya2a")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="tutorial"]
+offset_left = 16.0
+offset_top = 409.0
+offset_right = 467.0
+offset_bottom = 598.0
+theme = ExtResource("6_bxetd")
+theme_override_font_sizes/normal_font_size = 40
+text = "Spam the advertise button to attract more customers to your hotel."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="tutorial"]
+offset_left = 800.0
+offset_top = 119.0
+offset_right = 977.0
+offset_bottom = 247.0
+theme = ExtResource("6_bxetd")
+theme_override_font_sizes/normal_font_size = 30
+text = "view the inside of your hotel here."
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_s1hc8")
+}
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="advertisements" to="." method="_on_advertisements_timeout"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

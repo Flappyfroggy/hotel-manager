@@ -1,6 +1,7 @@
 extends Control
 @onready var moneyamount = $RichTextLabel
-
+@onready var transition = $transition_pt1/AnimationPlayer
+@onready var sprite = $transition_pt1/Sprite2D
 func _on_button_pressed() -> void: #bed purchase
 	if e.money >= 800:
 		e.money -= 800
@@ -23,3 +24,7 @@ func _on_button_3_pressed() -> void: #sign purchase
 	if e.money >= 250:
 		e.money -= 250
 		e.add_sign = true
+
+func _ready():
+	sprite.show()
+	transition.play("transition2")

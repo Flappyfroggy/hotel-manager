@@ -7,7 +7,11 @@ func _ready():
 	transition.play("transition2")
 func _process(_float) -> void:
 	if e.hotel_intro_ended:
-		get_tree().change_scene_to_file("res://node_2d.tscn")
+		transition.play("transition1")
+	if e.transition2_finish:
+		e.transition2_finish = false
+		DialogueManager.show_dialogue_balloon(intro, "start")
+		print("p")
 	if e.transition_finish:
 		e.transition_finish = false
-		DialogueManager.show_dialogue_balloon(intro, "start")
+		get_tree().change_scene_to_file("res://node_2d.tscn")

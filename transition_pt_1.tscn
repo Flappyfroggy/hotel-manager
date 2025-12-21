@@ -63,7 +63,6 @@ script = ExtResource("1_43ar1")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(500.5, 300)
-scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_d7kls")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -13,11 +13,6 @@ func _ready():
 		bookshelf.hide()
 	if not e.bought_sign:
 		sign.hide()
-	if e.tutorial:
-		animation.play("tutorial")
-	if not e.tutorial:
-		tutorial_pt1.hide()
-		tutorial_pt2.hide()
 func _process(_float) -> void:
 	if e.add_bed and not e.bought_bed:
 		bed.show()
@@ -32,3 +27,10 @@ func _process(_float) -> void:
 	if e.add_sign and not e.bought_sign and not e.tutorial:
 		e.boughtsign = true
 		sign.show()
+	if e.transition2_finish:
+		e.transition2_finish = false
+		if e.tutorial:
+			animation.play("tutorial")
+		if not e.tutorial:
+			tutorial_pt1.hide()
+			tutorial_pt2.hide()

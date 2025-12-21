@@ -6,7 +6,6 @@ func _on_button_pressed() -> void:
 	if not b:
 		sprite.show()
 		sprite.position = Vector2(0,0)
-		sprite.scale = Vector2(0.6,0.6)
 		transition.play("transition1")
 		e.money += 1000
 		b = true

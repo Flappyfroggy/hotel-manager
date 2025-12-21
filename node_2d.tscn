@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://d4dwk6imlb8c0"]
+[gd_scene load_steps=21 format=4 uid="uid://d4dwk6imlb8c0"]
 
 [ext_resource type="Texture2D" uid="uid://c6tahyfpx1c1y" path="res://assets/sky.png" id="1_0e48y"]
 [ext_resource type="Script" uid="uid://dcodpfkp74mft" path="res://node_2d.gd" id="1_q6r6c"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d01nav4jrsw8q" path="res://assets/sign.png" id="6_4d7sh"]
 [ext_resource type="Theme" uid="uid://d0kqpuio6hw8v" path="res://assets/theme.tres" id="6_kdubu"]
 [ext_resource type="Texture2D" uid="uid://bh1ctf4v6hqtq" path="res://assets/ARROW.png" id="7_d21ai"]
+[ext_resource type="PackedScene" uid="uid://d0ixdf70ovu43" path="res://transition_pt_1.tscn" id="10_ir8iy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0hol4"]
 texture = ExtResource("3_epypp")
@@ -243,6 +244,9 @@ offset_left = 250.0
 offset_top = -360.0
 offset_right = 250.0
 offset_bottom = -360.0
+
+[node name="transition_pt1" parent="Control" instance=ExtResource("10_ir8iy")]
+position = Vector2(-250, 360)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

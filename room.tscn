@@ -251,12 +251,14 @@ visible_characters = 0
 visible_ratio = 0.0
 
 [node name="Sprite2D" type="Sprite2D" parent="animation"]
+visible = false
 position = Vector2(-189, -205)
 rotation = 0.68792963
 scale = Vector2(1.0702649, 1.0328202)
 texture = ExtResource("7_voycu")
 
 [node name="animation_pt2" type="Node2D" parent="."]
+visible = false
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="animation_pt2"]
 offset_left = -238.0
