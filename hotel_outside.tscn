@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b2p2ukiycl6rt"]
+[gd_scene load_steps=11 format=3 uid="uid://b2p2ukiycl6rt"]
 
 [ext_resource type="Script" uid="uid://dlqm11pjtyxxn" path="res://hotel_outside.gd" id="1_g7t26"]
 [ext_resource type="Texture2D" uid="uid://b4t3txh7jas1r" path="res://assets/hotel inside.png" id="1_i0lhx"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d0ixdf70ovu43" path="res://transition_pt_1.tscn" id="4_ssxiv"]
 [ext_resource type="Texture2D" uid="uid://bh1ctf4v6hqtq" path="res://assets/ARROW.png" id="5_mya2a"]
 [ext_resource type="Theme" uid="uid://d0kqpuio6hw8v" path="res://assets/theme.tres" id="6_bxetd"]
+[ext_resource type="PackedScene" uid="uid://du6b3k4bho238" path="res://control.tscn" id="7_bxetd"]
 
 [sub_resource type="Animation" id="Animation_tw17u"]
 length = 0.001
@@ -170,6 +171,16 @@ visible_ratio = 0.0
 libraries = {
 &"": SubResource("AnimationLibrary_s1hc8")
 }
+
+[node name="Control" parent="." instance=ExtResource("7_bxetd")]
+anchors_preset = 7
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 501.0
+offset_top = 1.0
+offset_right = 501.0
+offset_bottom = 1.0
+grow_vertical = 0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="advertisements" to="." method="_on_advertisements_timeout"]

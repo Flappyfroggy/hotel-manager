@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://nvxwgrm77x0q"]
+[gd_scene load_steps=6 format=3 uid="uid://nvxwgrm77x0q"]
 
 [ext_resource type="Script" uid="uid://bw3xux3uuyv0y" path="res://inside.gd" id="1_7ujdm"]
 [ext_resource type="PackedScene" uid="uid://buf3n8v7q1su2" path="res://room.tscn" id="1_gb8fl"]
 [ext_resource type="PackedScene" uid="uid://d0ixdf70ovu43" path="res://transition_pt_1.tscn" id="2_r8opg"]
 [ext_resource type="Theme" uid="uid://d0kqpuio6hw8v" path="res://assets/theme.tres" id="4_touke"]
+[ext_resource type="PackedScene" uid="uid://du6b3k4bho238" path="res://control.tscn" id="5_gskfx"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_7ujdm")
@@ -98,5 +99,13 @@ theme = ExtResource("4_touke")
 theme_override_colors/default_color = Color(0.042483415, 0.04257259, 0.36901763, 1)
 theme_override_font_sizes/normal_font_size = 30
 text = "coins:0"
+
+[node name="Control" parent="." instance=ExtResource("5_gskfx")]
+anchor_left = 0.0
+anchor_bottom = 0.0
+offset_left = 530.0
+offset_top = 3.0
+offset_right = 530.0
+offset_bottom = 3.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
