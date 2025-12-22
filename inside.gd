@@ -2,10 +2,12 @@ extends Node2D
 @onready var transition = $transition_pt1/AnimationPlayer
 @onready var sprite = $transition_pt1/Sprite2D
 @onready var bunny_preload = preload("res://bunny_inside.tscn")
+@onready var coins = $RichTextLabel
 func _ready():
 	sprite.show()
 	transition.play("transition2")
 func _process(_float) -> void:
+	coins.text = "coins:	" + str(e.money)
 	if not e.room1_full:
 		var bunny = bunny_preload.instantiate()
 		add_child(bunny)

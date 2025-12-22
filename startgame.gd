@@ -7,7 +7,7 @@ func _on_button_pressed() -> void:
 		sprite.show()
 		sprite.position = Vector2(0,0)
 		transition.play("transition1")
-		e.money += 1000
+		e.money += 800
 		b = true
 func _process(delta: float) -> void:
 	if e.transition_finish:

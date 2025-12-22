@@ -89,4 +89,14 @@ offset_bottom = 38.0
 theme = ExtResource("4_touke")
 text = "BACK"
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 207.0
+offset_top = 5.0
+offset_right = 455.0
+offset_bottom = 56.0
+theme = ExtResource("4_touke")
+theme_override_colors/default_color = Color(0.042483415, 0.04257259, 0.36901763, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "coins:0"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
