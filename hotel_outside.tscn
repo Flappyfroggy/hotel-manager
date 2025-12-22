@@ -125,7 +125,7 @@ scale = Vector2(2, 2.0066667)
 texture = ExtResource("1_i0lhx")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 2.5
 
 [node name="go_to" parent="." instance=ExtResource("3_ske0d")]
 offset_left = 500.0
@@ -147,22 +147,22 @@ texture = ExtResource("5_mya2a")
 [node name="RichTextLabel" type="RichTextLabel" parent="tutorial"]
 offset_left = 16.0
 offset_top = 409.0
-offset_right = 467.0
+offset_right = 568.0
 offset_bottom = 598.0
 theme = ExtResource("6_bxetd")
-theme_override_font_sizes/normal_font_size = 40
-text = "Spam the advertise button to attract more customers to your hotel."
+theme_override_font_sizes/normal_font_size = 30
+text = "Spam the advertise button to attract more customers to your hotel and get a higher money multiplier per customer. Come back to this menu to increase it again once it drops."
 visible_characters = 0
 visible_ratio = 0.0
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="tutorial"]
-offset_left = 800.0
-offset_top = 119.0
-offset_right = 977.0
-offset_bottom = 247.0
+offset_left = 760.0
+offset_top = 126.0
+offset_right = 981.0
+offset_bottom = 290.0
 theme = ExtResource("6_bxetd")
-theme_override_font_sizes/normal_font_size = 30
-text = "view the inside of your hotel here."
+theme_override_font_sizes/normal_font_size = 25
+text = "View the inside of your hotel here to get money from your customers."
 visible_characters = 0
 visible_ratio = 0.0
 

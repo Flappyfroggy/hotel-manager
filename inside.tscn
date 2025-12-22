@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://nvxwgrm77x0q"]
+[gd_scene load_steps=5 format=3 uid="uid://nvxwgrm77x0q"]
 
 [ext_resource type="Script" uid="uid://bw3xux3uuyv0y" path="res://inside.gd" id="1_7ujdm"]
 [ext_resource type="PackedScene" uid="uid://buf3n8v7q1su2" path="res://room.tscn" id="1_gb8fl"]
 [ext_resource type="PackedScene" uid="uid://d0ixdf70ovu43" path="res://transition_pt_1.tscn" id="2_r8opg"]
+[ext_resource type="Theme" uid="uid://d0kqpuio6hw8v" path="res://assets/theme.tres" id="4_touke"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_7ujdm")
@@ -81,3 +82,11 @@ position = Vector2(501, 500)
 position = Vector2(828, 493)
 
 [node name="transition_pt1" parent="." instance=ExtResource("2_r8opg")]
+
+[node name="Button" type="Button" parent="."]
+offset_right = 200.0
+offset_bottom = 38.0
+theme = ExtResource("4_touke")
+text = "BACK"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -21,11 +21,11 @@ func _process(_float) -> void:
 			tutorial_pt1.hide()
 			animation.play("tutorial_pt2")
 			e.tutorial = false
-	if e.add_bookshelf and not e.bought_bookshelf and not e.tutorial:
+	if e.add_bookshelf and not e.bought_bookshelf:
 		e.bought_bookshelf = true
 		bookshelf.show()
-	if e.add_sign and not e.bought_sign and not e.tutorial:
-		e.boughtsign = true
+	if e.add_sign and not e.bought_sign:
+		e.bought_sign = true
 		sign.show()
 	if e.transition2_finish:
 		e.transition2_finish = false

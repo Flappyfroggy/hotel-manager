@@ -15,15 +15,17 @@ func _on_exit_pressed() -> void:
 
 
 func _on_button_2_pressed() -> void: #bookshelf purchase
-	if e.money >= 450:
-		e.money -= 500
-		e.add_bookshelf = true
+	if e.bought_bed and not e.bought_bookshelf:
+		if e.money >= 450:
+			e.money -= 450
+			e.add_bookshelf = true
 
 
 func _on_button_3_pressed() -> void: #sign purchase
-	if e.money >= 250:
-		e.money -= 250
-		e.add_sign = true
+	if e.bought_bed and not e.bought_sign:
+		if e.money >= 250:
+			e.money -= 250
+			e.add_sign = true
 
 func _ready():
 	sprite.show()
