@@ -19,3 +19,4 @@ var room3_full := false
 var room4_full := false
 var room5_full := false
 var room6_full := false
+var played_tutorial := false

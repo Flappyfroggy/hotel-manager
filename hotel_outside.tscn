@@ -174,7 +174,9 @@ libraries = {
 
 [node name="Control" parent="." instance=ExtResource("7_bxetd")]
 anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = 501.0
 offset_top = 1.0

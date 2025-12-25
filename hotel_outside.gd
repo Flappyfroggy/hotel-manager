@@ -34,7 +34,7 @@ func _on_timer_timeout() -> void:
 func _on_advertisements_timeout() -> void:
 	npc = npc_preload.instantiate()
 	add_child(npc)
-	e.customers += 3
+	e.customers += 1
 	advertisement_timerstarted = false
 	print(e.advertisement)
 
