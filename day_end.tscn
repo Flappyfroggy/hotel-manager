@@ -1,0 +1,198 @@
+[gd_scene load_steps=8 format=3 uid="uid://dc2jep2ovp4gi"]
+
+[ext_resource type="Script" uid="uid://ewd4d45m7eq8" path="res://day_end.gd" id="1_67dcx"]
+[ext_resource type="Theme" uid="uid://d0kqpuio6hw8v" path="res://assets/theme.tres" id="2_d6rr1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dx23i"]
+bg_color = Color(1, 0.9098039, 0.8509804, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hdsdk"]
+bg_color = Color(0.60665625, 0.72802263, 0.7285545, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="Animation" id="Animation_67dcx"]
+resource_name = "fade"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 6, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("review_text:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 3.04, 5.53, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_d6rr1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("review_text:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dx23i"]
+_data = {
+&"RESET": SubResource("Animation_d6rr1"),
+&"fade": SubResource("Animation_67dcx")
+}
+
+[node name="day_end" type="Control"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_67dcx")
+metadata/_edit_use_anchors_ = true
+
+[node name="bg_colour" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.0
+offset_top = -224.5
+offset_right = 197.0
+offset_bottom = 224.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dx23i")
+
+[node name="review_colour" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -106.0
+offset_top = -153.0
+offset_right = 121.0
+offset_bottom = 69.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hdsdk")
+
+[node name="end_of_day" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = -139.0
+offset_top = -216.0
+offset_right = 151.0
+offset_bottom = -169.0
+theme = ExtResource("2_d6rr1")
+theme_override_colors/default_color = Color(0.042483415, 0.04257259, 0.36901763, 1)
+theme_override_font_sizes/normal_font_size = 40
+text = "End of day"
+horizontal_alignment = 1
+
+[node name="review_label" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.0
+offset_top = -139.0
+offset_right = 103.0
+offset_bottom = -115.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_d6rr1")
+theme_override_colors/default_color = Color(0.042483415, 0.04257259, 0.36901763, 1)
+text = "Review from Customer"
+horizontal_alignment = 2
+
+[node name="review_text" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = -84.0
+offset_top = -49.0
+offset_right = 99.0
+offset_bottom = 47.0
+text = "(review text)"
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="star1" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -98.0
+offset_top = -112.0
+offset_right = -67.0
+offset_bottom = -72.0
+
+[node name="star2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -54.0
+offset_top = -112.0
+offset_right = -24.0
+offset_bottom = -72.0
+
+[node name="star3" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -11.0
+offset_top = -112.0
+offset_right = 21.0
+offset_bottom = -72.0
+
+[node name="star4" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = -112.0
+offset_right = 66.0
+offset_bottom = -72.0
+
+[node name="star5" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = -112.0
+offset_right = 112.0
+offset_bottom = -72.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_dx23i")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://du6b3k4bho238"]
+[gd_scene load_steps=4 format=3 uid="uid://du6b3k4bho238"]
 
 [ext_resource type="Theme" uid="uid://d0kqpuio6hw8v" path="res://assets/theme.tres" id="1_0fbet"]
 [ext_resource type="Script" uid="uid://dqcw8dwv8gif6" path="res://control.gd" id="1_62e2m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62e2m"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -14,19 +21,12 @@ offset_bottom = -38.4
 grow_horizontal = 2
 script = ExtResource("1_62e2m")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -199.0
-offset_top = -1.0
-offset_right = 200.0
-offset_bottom = 39.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -200.0
+offset_right = 201.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_62e2m")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
