@@ -8,6 +8,7 @@ Other Hotel Owner: ...
 Other Hotel Owner: You'll have to pay me a sum of 3000 coins for that.
 Other Hotel Owner: I'll be back soon.
 Narrator: Your money multiplier will be decreased until you pay back the other hotel owner.
-set e.advertisement_multiplier = 0.5
+set e.advertisement_multiplier = (0.50)
+set e.checkoutside = false
 do e.to_hotel_outside()
 => END

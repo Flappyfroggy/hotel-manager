@@ -22,9 +22,16 @@ var room6_full := false
 var played_tutorial := false
 var review = 0
 var checkoutside := false
-var advertisement_multiplier := 1
-func _process(_float) -> void:
-	if checkoutside:
-		get_tree().change_scene_to_file("res://hotel_intro.tscn")
+var advertisement_multiplier := int(1.0)
+var prevent := false
+var pay_owner := false
+func fish():
+	get_tree().change_scene_to_file("res://hotel_intro.tscn")
 func to_hotel_outside():
 	get_tree().change_scene_to_file("res://hotel_outside.tscn")
+	e.room1_full = false
+	e.room2_full = false
+	e.room3_full = false
+	e.room4_full = false
+	e.room5_full = false
+	e.room6_full = false

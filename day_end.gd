@@ -17,7 +17,6 @@ func _ready():
 	if Timeofday.day == 1 and e.bought_bed and e.bought_bookshelf and e.bought_sign:
 		review1_text.text = "This place is SO bad. The aura here is SO off. One star!"
 		s1.show()
-		e.review = int(1)
 	elif Timeofday.day == 1 and e.bought_bed and e.bought_bookshelf:
 		review1_text.text = "Sufficiently terrible! One star!"
 		s1.show()
@@ -30,7 +29,21 @@ func _ready():
 	elif Timeofday.day == 1:
 		review1_text.text = "...Disgusting. One star!"
 		s1.show()
+	elif e.advertisement_multiplier == 0.5 and not e.money <= 3000:
+		review1_text.text = "I'm still waiting for the money. You're only getting a two star review from me until then."
+		s1.show()
+		s2.show()
+	elif e.advertisement_multiplier == 0.5 and e.money >= 3000:
+		review1_text.text = "It would seem you haven enough funds for the payment."
+		s1.show()
+		s2.show()
+		s3.show()
+		e.pay_owner = true
+		get_tree().change_scene_to_file("res://hotel_intro.tscn")
+	else:
+		review1_text.text = "huh.."
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	queue_free()
-	DialogueManager.show_dialogue_balloon(dialogue, "start")
+	if Timeofday.day == 1:
+		DialogueManager.show_dialogue_balloon(dialogue, "start")

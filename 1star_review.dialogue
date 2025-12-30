@@ -3,4 +3,5 @@ New Hotel Owner: Huh? A one star review?
 New Hotel Owner: No... this can't be right. I'm being sabotaged! 
 New Hotel Owner: Let's go outside and check if anything seems off.
 set e.checkoutside = true
+do e.fish()
 => END

@@ -12,8 +12,7 @@ func _on_inside_pressed() -> void:
 
 
 func _on_advertise_pressed() -> void:
-	e.advertisement += 5
-	print(e.advertisement)
+	e.advertisement += 4
 	animation.play("advertise")
 	bell.show()
 	bell_ring.play()

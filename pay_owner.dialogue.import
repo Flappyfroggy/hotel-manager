@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cnc6wv8tb27w7"
+path="res://.godot/imported/pay_owner.dialogue-a187797e51c2e06b72da7fe8781b60a5.tres"
+
+[deps]
+
+source_file="res://pay_owner.dialogue"
+dest_files=["res://.godot/imported/pay_owner.dialogue-a187797e51c2e06b72da7fe8781b60a5.tres"]
+
+[params]
+
+defaults=true

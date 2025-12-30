@@ -15,8 +15,6 @@ texture = ExtResource("1_al2m1")
 
 [node name="transition_pt1" parent="." instance=ExtResource("3_56wrq")]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(154, 422)
 texture = ExtResource("4_q35lt")
