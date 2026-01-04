@@ -1,0 +1,37 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://cdnpj15hjdrwc"]
+
+[ext_resource type="FontFile" uid="uid://c7o5odwberpw0" path="res://assets/connection_ii/ConnectionII.otf" id="1_0x0iw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vfjqy"]
+bg_color = Color(0.08692185, 0.4979546, 0.5565829, 1)
+border_width_left = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8853826, 0.5453364, 0.35287204, 1)
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3igky"]
+bg_color = Color(0.10258611, 0.5672146, 0.63450336, 1)
+border_width_left = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.9580614, 0.74880666, 0.63742524, 1)
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0x0iw"]
+bg_color = Color(0.10626937, 0.5782982, 0.6455174, 1)
+border_width_left = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.9580614, 0.74880666, 0.63742524, 1)
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[resource]
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_0x0iw")
+Button/styles/hover = SubResource("StyleBoxFlat_vfjqy")
+Button/styles/normal = SubResource("StyleBoxFlat_3igky")
+Button/styles/pressed = SubResource("StyleBoxFlat_0x0iw")

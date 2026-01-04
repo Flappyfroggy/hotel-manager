@@ -5,3 +5,4 @@
 [node name="bg_music" type="AudioStreamPlayer"]
 stream = ExtResource("1_p1osb")
 autoplay = true
+parameters/looping = true

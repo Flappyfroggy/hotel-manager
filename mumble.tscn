@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://qraugwwgbhbn"]
+
+[ext_resource type="AudioStream" uid="uid://b11tvbvgtlkf7" path="res://assets/ifg04-y7y4e.wav" id="1_tb3wl"]
+
+[node name="mumble" type="AudioStreamPlayer"]
+stream = ExtResource("1_tb3wl")
+volume_db = 10.0

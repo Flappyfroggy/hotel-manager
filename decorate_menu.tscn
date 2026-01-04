@@ -1,10 +1,38 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1ugpoiu1yxhi"]
+[gd_scene load_steps=10 format=3 uid="uid://b1ugpoiu1yxhi"]
 
 [ext_resource type="Script" uid="uid://d2gvgywp2kmmb" path="res://decorate_menu.gd" id="1_2pxhd"]
 [ext_resource type="Texture2D" uid="uid://dyi8exq5vc85k" path="res://assets/bed_tile.png" id="1_x4i3i"]
 [ext_resource type="Texture2D" uid="uid://iv5ow3gwreef" path="res://assets/bookshelf.png" id="3_5g3bp"]
 [ext_resource type="Theme" uid="uid://d0kqpuio6hw8v" path="res://assets/theme.tres" id="3_vcb5d"]
 [ext_resource type="Texture2D" uid="uid://d01nav4jrsw8q" path="res://assets/sign.png" id="4_cd34k"]
+[ext_resource type="Theme" uid="uid://cdnpj15hjdrwc" path="res://decorate_menu.tres" id="6_3xt5y"]
+
+[sub_resource type="Animation" id="Animation_3xt5y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("too_broke:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-256, 457)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("too_broke:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_cd34k"]
 resource_name = "not_enough_money"
@@ -32,33 +60,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_3xt5y"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("too_broke:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-256, 457)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("too_broke:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vfjqy"]
@@ -144,12 +145,12 @@ texture = ExtResource("4_cd34k")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 28.0
+offset_left = 26.0
 offset_top = 141.0
 offset_right = 174.0
 offset_bottom = 206.0
 size_flags_horizontal = 3
-theme = ExtResource("3_vcb5d")
+theme = ExtResource("6_3xt5y")
 text = "$800"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
@@ -177,7 +178,7 @@ offset_left = 185.0
 offset_top = 140.0
 offset_right = 333.0
 offset_bottom = 207.0
-theme = ExtResource("3_vcb5d")
+theme = ExtResource("6_3xt5y")
 text = "$1200"
 
 [node name="Button3" type="Button" parent="."]
@@ -186,7 +187,7 @@ offset_left = 26.0
 offset_top = 337.0
 offset_right = 174.0
 offset_bottom = 407.0
-theme = ExtResource("3_vcb5d")
+theme = ExtResource("6_3xt5y")
 text = "$900"
 
 [node name="too_broke" type="RichTextLabel" parent="."]

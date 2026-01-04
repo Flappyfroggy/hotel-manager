@@ -50,11 +50,13 @@ func _process(_float) -> void:
 	if e.transition2_finish:
 		e.transition2_finish = false
 		if not e.played_tutorial:
+			alien.play(2)
 			animatione.play("tutorial")
 			tutorial_panel.show()
 			e.played_tutorial = true
 
 func _on_button_pressed() -> void:
+	click.play()
 	get_tree().change_scene_to_file("res://hotel_outside.tscn")
 	e.room1_full = false
 	e.room2_full = false
@@ -62,3 +64,8 @@ func _on_button_pressed() -> void:
 	e.room4_full = false
 	e.room5_full = false
 	e.room6_full = false
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "tutorial":
+		alien.stop()

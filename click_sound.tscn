@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjxqypvxosppy"]
+
+[ext_resource type="AudioStream" uid="uid://bxa6m7fulkq61" path="res://assets/448081__breviceps__tic-toc-click.wav" id="1_fqus4"]
+
+[node name="click_sound" type="AudioStreamPlayer"]
+stream = ExtResource("1_fqus4")

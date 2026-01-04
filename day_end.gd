@@ -15,6 +15,7 @@ func _ready():
 	s4.hide()
 	s5.hide()
 	animation.play("fade")
+	alien.play()
 	if Timeofday.day == 1 and e.bought_bed and e.bought_bookshelf and e.bought_sign:
 		review1_text.text = "This place is SO bad. The aura here is SO off. One star!"
 		s1.show()

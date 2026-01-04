@@ -7,6 +7,7 @@ extends Node2D
 @onready var pay_owner = preload("res://pay_owner.dialogue")
 @onready var marketing_fees = $random_fees
 @onready var pay_marketing_fees = preload("res://marketing_fees.dialogue")
+@onready var mumble = $mumble
 func _ready():
 	sprite.show()
 	other_hotel_owner.hide()
@@ -15,6 +16,7 @@ func _ready():
 	transition.play("transition2", 0.0)
 func _process(_float) -> void:
 	if e.transition2_finish:
+		mumble.play()
 		if e.checkoutside:
 			DialogueManager.show_dialogue_balloon(one_star_review, "start")
 			other_hotel_owner.show()

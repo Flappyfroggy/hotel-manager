@@ -19,6 +19,7 @@ func _process(_float) -> void:
 		e.bought_bed = true
 		if e.tutorial:
 			tutorial_pt1.hide()
+			alien.play(1)
 			animation.play("tutorial_pt2")
 			e.tutorial = false
 	if e.add_bookshelf and not e.bought_bookshelf:
@@ -30,7 +31,12 @@ func _process(_float) -> void:
 	if e.transition2_finish:
 		e.transition2_finish = false
 		if e.tutorial:
+			alien.play(5)
 			animation.play("tutorial")
 		if not e.tutorial:
 			tutorial_pt1.hide()
 			tutorial_pt2.hide()
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	alien.stop()

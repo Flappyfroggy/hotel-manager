@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://wrbrm2fp64u8"]
+
+[ext_resource type="AudioStream" uid="uid://8fjdhwbuqqtu" path="res://assets/353849__dtmp__alien-voice.ogg.wav" id="1_wnssr"]
+
+[node name="alien_speak" type="AudioStreamPlayer"]
+stream = ExtResource("1_wnssr")

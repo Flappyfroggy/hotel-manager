@@ -290,3 +290,5 @@ visible_ratio = 0.0
 [node name="Sprite2D" type="Sprite2D" parent="animation_pt2"]
 position = Vector2(137, 309)
 texture = ExtResource("7_d21ai")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

@@ -5,13 +5,16 @@ extends Control
 func _ready():
 	bell.hide()
 func _on_decorate_pressed() -> void:
+	click.play()
 	get_tree().change_scene_to_file("res://node_2d.tscn")
 	print("to decorate scene")
 func _on_inside_pressed() -> void:
+	click.play()
 	get_tree().change_scene_to_file("res://inside.tscn")
 	print("to inside hotel")
 
 func _on_advertise_pressed() -> void:
+	click.play()
 	e.advertisement += 4
 	animation.play("advertise")
 	bell.show()

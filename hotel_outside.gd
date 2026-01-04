@@ -28,6 +28,8 @@ func _process(_float) -> void:
 	if e.transition2_finish:
 		e.transition2_finish = false
 		tutorial_animation.play("tutorial")
+		if not e.hide_tutorial:
+			alien.play(3.5)
 	if e.money <= -500:
 		red_sprite.show()
 		broke_text.show()
@@ -48,6 +50,7 @@ func _on_advertisements_timeout() -> void:
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	e.hide_tutorial = true
+	alien.stop()
 	if anim_name == "too_broke":
 		get_tree().quit()
 		print("quit game")

@@ -21,6 +21,8 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 e="*res://new_script.gd"
 BgMusic="*res://bg_music.tscn"
 Timeofday="*res://timeofday.gd"
+click="*res://click_sound.tscn"
+alien="*res://alien_speak.tscn"
 
 [dialogue_manager]
 

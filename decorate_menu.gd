@@ -5,6 +5,7 @@ extends Control
 @onready var too_broke_text = $too_broke
 @onready var animation = $AnimationPlayer
 func _on_button_pressed() -> void: #bed purchase
+	click.play()
 	if not e.bought_bed:
 		if e.money >= 800:
 			e.money -= 800
@@ -17,10 +18,12 @@ func _process(_float) -> void:
 
 
 func _on_exit_pressed() -> void:
+	click.play()
 	get_tree().change_scene_to_file("res://hotel_outside.tscn")
 
 
 func _on_button_2_pressed() -> void: #bookshelf purchase
+	click.play()
 	if e.bought_bed and not e.bought_bookshelf:
 		if e.money >= 1200:
 			e.money -= 1200
@@ -30,6 +33,7 @@ func _on_button_2_pressed() -> void: #bookshelf purchase
 			play_too_broke_animation()
 
 func _on_button_3_pressed() -> void: #sign purchase
+	click.play()
 	if e.bought_bed and not e.bought_sign:
 		if e.money >= 900:
 			e.money -= 900
