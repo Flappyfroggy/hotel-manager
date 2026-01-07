@@ -4,8 +4,8 @@ New Hotel Owner: Oh. I must've forgotten to install one.
 Inspector: Yeah that really can't be happening - we'll have to issue you a fine again for this.
 Inspector: This area gets fires very commonly - In fact, for every day that you don't have it installed you'll be issued another fine.
 New Hotel Owner: ... I see. How much is it?
-Inspector: $300 per day.
-set e.money -= 300
+Inspector: $500 per day.
+set e.money -= 500
 set e.check_for_fire_extinguisher = true
 do e.to_hotel_outside()
 => END

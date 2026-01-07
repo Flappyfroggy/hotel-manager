@@ -192,7 +192,7 @@ offset_top = 140.0
 offset_right = 333.0
 offset_bottom = 207.0
 theme = ExtResource("6_3xt5y")
-text = "$1200"
+text = "$1500"
 
 [node name="Button3" type="Button" parent="."]
 layout_mode = 0
@@ -201,7 +201,7 @@ offset_top = 337.0
 offset_right = 174.0
 offset_bottom = 407.0
 theme = ExtResource("6_3xt5y")
-text = "$900"
+text = "$2000"
 
 [node name="too_broke" type="RichTextLabel" parent="."]
 layout_mode = 0
@@ -227,7 +227,7 @@ offset_top = 337.0
 offset_right = 332.0
 offset_bottom = 407.0
 theme = ExtResource("6_3xt5y")
-text = "$500"
+text = "$800"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

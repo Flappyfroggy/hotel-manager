@@ -36,6 +36,8 @@ var add_fire_extinguisher := false
 var no_fire_extinguisher := false
 var check_for_fire_extinguisher := false
 var fire_extinguisher := false
+var water_leak := false
+var broken_stairs := false
 func fish():
 	get_tree().change_scene_to_file("res://hotel_intro.tscn")
 func to_hotel_outside():

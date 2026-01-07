@@ -4,7 +4,7 @@ extends Node2D
 var money
 func _ready():
 	money_label.hide()
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	money = 3 * e.customers * e.advertisement_multiplier + e.review * 2
 	money_label.text = "+" + str(money) + " coins"
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:

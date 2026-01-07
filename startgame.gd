@@ -9,7 +9,7 @@ func _on_button_pressed() -> void:
 		transition.play("transition1")
 		e.money += 800
 		b = true
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if e.transition_finish:
 		e.transition_finish = false
 		get_tree().change_scene_to_file("res://hotel_intro.tscn")

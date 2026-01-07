@@ -25,21 +25,21 @@ func _on_exit_pressed() -> void:
 func _on_button_2_pressed() -> void: #bookshelf purchase
 	click.play()
 	if e.bought_bed and not e.bought_bookshelf:
-		if e.money >= 1200:
-			e.money -= 1200
+		if e.money >= 1500:
+			e.money -= 1500
 			e.add_bookshelf = true
 			e.amount_of_furniture += 1
-		elif e.money <= 1200:
+		elif e.money <= 1500:
 			play_too_broke_animation()
 
 func _on_button_3_pressed() -> void: #sign purchase
 	click.play()
 	if e.bought_bed and not e.bought_sign:
-		if e.money >= 900:
-			e.money -= 900
+		if e.money >= 2000:
+			e.money -= 2000
 			e.add_sign = true
 			e.amount_of_furniture += 1
-		elif e.money <= 900:
+		elif e.money <= 2000:
 			play_too_broke_animation()
 
 func _ready():
@@ -54,9 +54,9 @@ func play_too_broke_animation():
 func _on_button_4_pressed() -> void: #fire extinguisher purchase
 	click.play()
 	if e.bought_bed and not e.bought_fire_extinguisher:
-		if e.money >= 500:
-			e.money -= 500
+		if e.money >= 800:
+			e.money -= 800
 			e.add_fire_extinguisher = true
 			e.amount_of_furniture += 1
-		elif e.money <= 500:
+		elif e.money <= 800:
 			play_too_broke_animation()
