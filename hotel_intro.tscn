@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://diixox03lkjy6"]
+[gd_scene load_steps=8 format=3 uid="uid://diixox03lkjy6"]
 
 [ext_resource type="Texture2D" uid="uid://b4t3txh7jas1r" path="res://assets/hotel inside.png" id="1_al2m1"]
 [ext_resource type="Script" uid="uid://g4j3sv57ihty" path="res://hotel_intro.gd" id="1_kqu2y"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b7m57f4kwa1rv" path="res://assets/t.png" id="4_s6wxa"]
 [ext_resource type="Texture2D" uid="uid://blunioe5lenwu" path="res://assets/Untitled_Artwork (1).png" id="5_x8ui7"]
 [ext_resource type="PackedScene" uid="uid://qraugwwgbhbn" path="res://mumble.tscn" id="6_x8ui7"]
+[ext_resource type="Texture2D" uid="uid://bu5mntl7jl6lv" path="res://assets/guy.png" id="7_38f6h"]
 
 [node name="hotel_intro" type="Node2D"]
 script = ExtResource("1_kqu2y")
@@ -28,3 +29,8 @@ scale = Vector2(0.32686082, 0.27029395)
 texture = ExtResource("5_x8ui7")
 
 [node name="mumble" parent="." instance=ExtResource("6_x8ui7")]
+
+[node name="inspector" type="Sprite2D" parent="."]
+position = Vector2(139.99997, 251.74995)
+scale = Vector2(0.7159905, 0.5835401)
+texture = ExtResource("7_38f6h")

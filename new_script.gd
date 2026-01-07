@@ -20,7 +20,7 @@ var room4_full := false
 var room5_full := false
 var room6_full := false
 var played_tutorial := false
-var review = 0
+var review = 1
 var checkoutside := false
 var advertisement_multiplier: float = 1.0
 var prevent := false
@@ -28,6 +28,9 @@ var pay_owner := false
 var paid_owner := false
 var marketing_fees := false
 var amount_of_furniture = 0
+var emergency_exit := false
+var paid_marketing_fees := false
+var paid_emergency_exit := false
 func fish():
 	get_tree().change_scene_to_file("res://hotel_intro.tscn")
 func to_hotel_outside():

@@ -8,7 +8,10 @@ extends Node2D
 @onready var marketing_fees = $random_fees
 @onready var pay_marketing_fees = preload("res://marketing_fees.dialogue")
 @onready var mumble = $mumble
+@onready var inspector = $inspector
+@onready var pay_emergency_exit_fine = preload("res://inspector.dialogue")
 func _ready():
+	inspector.hide()
 	sprite.show()
 	other_hotel_owner.hide()
 	marketing_fees.hide()
@@ -30,6 +33,13 @@ func _process(_float) -> void:
 			DialogueManager.show_dialogue_balloon(pay_marketing_fees, "start")
 			e.transition2_finish = false
 			marketing_fees.show()
+			e.marketing_fees = false
+			e.paid_marketing_fees = true
+		elif e.emergency_exit:
+			e.emergency_exit = false
+			DialogueManager.show_dialogue_balloon(pay_emergency_exit_fine, "start")
+			e.transition2_finish = false
+			e.paid_emergency_exit = true
 		else:
 			DialogueManager.show_dialogue_balloon(intro, "start")
 			e.transition2_finish = false

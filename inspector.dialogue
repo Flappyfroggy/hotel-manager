@@ -1,0 +1,11 @@
+~ start
+Inspector: [[Hi|Hello|Howdy]], i was looking around and found that the emergency exit door was locked.
+New Hotel Owner: Huh? i thought i left that door unlocked.. did i accidentally lock it again?
+New Hotel Owner: ...
+New Hotel Owner: or am i getting sabotaged again?
+New Hotel Owner: ...
+Inspector: Hey! You can't keep ignoring me
+New Hotel Owner:  Wha- huh?
+Inspector: This is really dangerous in the case that theres a fire - i'm sorry, but i'm going to have to issue you a fine of $500 for this.
+Inspector: I'll be back later to check for any other problems here. 
+=> END
