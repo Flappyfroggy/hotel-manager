@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b1ugpoiu1yxhi"]
+[gd_scene load_steps=14 format=3 uid="uid://b1ugpoiu1yxhi"]
 
 [ext_resource type="Script" uid="uid://d2gvgywp2kmmb" path="res://decorate_menu.gd" id="1_2pxhd"]
 [ext_resource type="Texture2D" uid="uid://dyi8exq5vc85k" path="res://assets/bed_tile.png" id="1_x4i3i"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://d01nav4jrsw8q" path="res://assets/sign.png" id="4_cd34k"]
 [ext_resource type="Theme" uid="uid://cdnpj15hjdrwc" path="res://decorate_menu.tres" id="6_3xt5y"]
 [ext_resource type="Texture2D" uid="uid://dnjcutyldsfxn" path="res://assets/fire hydrant.png" id="6_vfjqy"]
+[ext_resource type="Texture2D" uid="uid://cgjlt83knfvnu" path="res://assets/cactusplant.png" id="7_ch6gu"]
+[ext_resource type="Texture2D" uid="uid://h7jiq8e7tfoe" path="res://assets/plant1.png" id="9_a51ej"]
+[ext_resource type="Texture2D" uid="uid://dqc861llbxmqm" path="res://assets/bedside_table.png" id="10_litbx"]
 
 [sub_resource type="Animation" id="Animation_3xt5y"]
 length = 0.001
@@ -122,6 +125,34 @@ offset_right = 332.0
 offset_bottom = 408.0
 theme = ExtResource("3_vcb5d")
 
+[node name="ColorRect7" type="Panel" parent="colorRects"]
+offset_left = 343.0
+offset_top = 212.0
+offset_right = 491.0
+offset_bottom = 408.0
+theme = ExtResource("3_vcb5d")
+
+[node name="ColorRect8" type="Panel" parent="colorRects"]
+offset_left = 26.0
+offset_top = 416.0
+offset_right = 174.0
+offset_bottom = 585.0
+theme = ExtResource("3_vcb5d")
+
+[node name="ColorRect9" type="Panel" parent="colorRects"]
+offset_left = 184.0
+offset_top = 416.0
+offset_right = 332.0
+offset_bottom = 585.0
+theme = ExtResource("3_vcb5d")
+
+[node name="ColorRect10" type="Panel" parent="colorRects"]
+offset_left = 343.0
+offset_top = 416.0
+offset_right = 491.0
+offset_bottom = 585.0
+theme = ExtResource("3_vcb5d")
+
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 26.0
@@ -155,6 +186,11 @@ texture = ExtResource("4_cd34k")
 position = Vector2(232, 62)
 scale = Vector2(2.1875, 1.9375)
 texture = ExtResource("6_vfjqy")
+
+[node name="cactus" type="Sprite2D" parent="HBoxContainer2"]
+position = Vector2(395, 60)
+scale = Vector2(2.035156, 2.0429688)
+texture = ExtResource("7_ch6gu")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -229,8 +265,48 @@ offset_bottom = 407.0
 theme = ExtResource("6_3xt5y")
 text = "$800"
 
+[node name="Button5" type="Button" parent="."]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 337.0
+offset_right = 491.0
+offset_bottom = 407.0
+theme = ExtResource("6_3xt5y")
+text = "$1000"
+
+[node name="Button6" type="Button" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 530.0
+offset_right = 174.0
+offset_bottom = 586.0
+theme = ExtResource("6_3xt5y")
+text = "$1300"
+
+[node name="Button7" type="Button" parent="."]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 529.0
+offset_right = 332.0
+offset_bottom = 585.0
+theme = ExtResource("6_3xt5y")
+text = "$600"
+
+[node name="plant" type="Sprite2D" parent="."]
+position = Vector2(101.24997, 445.25)
+scale = Vector2(3.0156255, 2.3984368)
+texture = ExtResource("9_a51ej")
+
+[node name="table" type="Sprite2D" parent="."]
+position = Vector2(259, 440)
+scale = Vector2(2.9843755, 2.6874998)
+texture = ExtResource("10_litbx")
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="Button7" to="." method="_on_button_7_pressed"]

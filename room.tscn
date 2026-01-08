@@ -1,25 +1,16 @@
-[gd_scene load_steps=21 format=4 uid="uid://buf3n8v7q1su2"]
+[gd_scene load_steps=30 format=4 uid="uid://buf3n8v7q1su2"]
 
 [ext_resource type="Script" uid="uid://dcodpfkp74mft" path="res://node_2d.gd" id="1_8cv3p"]
 [ext_resource type="TileSet" uid="uid://ljej2g64q7vb" path="res://assets/tile.tres" id="2_01y1d"]
 [ext_resource type="Texture2D" uid="uid://dyi8exq5vc85k" path="res://assets/bed_tile.png" id="3_42v8c"]
 [ext_resource type="Texture2D" uid="uid://iv5ow3gwreef" path="res://assets/bookshelf.png" id="4_mb7s7"]
+[ext_resource type="Texture2D" uid="uid://cgjlt83knfvnu" path="res://assets/cactusplant.png" id="4_xorjj"]
 [ext_resource type="Texture2D" uid="uid://d01nav4jrsw8q" path="res://assets/sign.png" id="5_xorjj"]
 [ext_resource type="Texture2D" uid="uid://dnjcutyldsfxn" path="res://assets/fire hydrant.png" id="6_01y1d"]
 [ext_resource type="Theme" uid="uid://d0kqpuio6hw8v" path="res://assets/theme.tres" id="6_xwbdb"]
 [ext_resource type="Texture2D" uid="uid://bh1ctf4v6hqtq" path="res://assets/ARROW.png" id="7_voycu"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0hol4"]
-texture = ExtResource("3_42v8c")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_q6r6c"]
-tile_shape = 1
-tile_layout = 5
-tile_offset_axis = 1
-tile_size = Vector2i(32, 16)
-sources/0 = SubResource("TileSetAtlasSource_0hol4")
+[ext_resource type="Texture2D" uid="uid://dqc861llbxmqm" path="res://assets/bedside_table.png" id="8_xwbdb"]
+[ext_resource type="Texture2D" uid="uid://h7jiq8e7tfoe" path="res://assets/plant1.png" id="9_voycu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4d7sh"]
 texture = ExtResource("4_mb7s7")
@@ -33,6 +24,30 @@ tile_layout = 5
 tile_offset_axis = 1
 tile_size = Vector2i(32, 16)
 sources/0 = SubResource("TileSetAtlasSource_4d7sh")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6tcb1"]
+texture = ExtResource("4_xorjj")
+texture_region_size = Vector2i(32, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_0f4jx"]
+tile_shape = 1
+tile_layout = 5
+tile_offset_axis = 1
+tile_size = Vector2i(32, 16)
+sources/0 = SubResource("TileSetAtlasSource_6tcb1")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0hol4"]
+texture = ExtResource("3_42v8c")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_q6r6c"]
+tile_shape = 1
+tile_layout = 5
+tile_offset_axis = 1
+tile_size = Vector2i(32, 16)
+sources/0 = SubResource("TileSetAtlasSource_0hol4")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ir8iy"]
 texture = ExtResource("5_xorjj")
@@ -58,6 +73,30 @@ tile_layout = 5
 tile_offset_axis = 1
 tile_size = Vector2i(32, 16)
 sources/0 = SubResource("TileSetAtlasSource_42v8c")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i0wn2"]
+texture = ExtResource("8_xwbdb")
+texture_region_size = Vector2i(32, 32)
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_l46xq"]
+tile_shape = 1
+tile_layout = 5
+tile_offset_axis = 1
+tile_size = Vector2i(32, 16)
+sources/0 = SubResource("TileSetAtlasSource_i0wn2")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v7lnt"]
+texture = ExtResource("9_voycu")
+texture_region_size = Vector2i(32, 32)
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_kbdc6"]
+tile_shape = 1
+tile_layout = 5
+tile_offset_axis = 1
+tile_size = Vector2i(32, 16)
+sources/0 = SubResource("TileSetAtlasSource_v7lnt")
 
 [sub_resource type="Animation" id="Animation_rj586"]
 length = 0.001
@@ -232,13 +271,18 @@ tile_set = ExtResource("2_01y1d")
 tile_map_data = PackedByteArray("AAD1//b/AgAAAAAAAAD1//f/AgAAAAAAAAD1//j/AgAAAAAAAAD1//n/AgAAAAAAAAD1//r/AgAAAAAAAAD1//v/AgAAAAAAAAD1//z/AgAAAAAAAAD1//3/AgAAAAAAAAD1//7/AgAAAAAAAAD2//b/AgAAAAAAAAD3//b/AgAAAAAAAAD4//b/AgAAAAAAAAD5//b/AgAAAAAAAAD6//b/AgAAAAAAAAD7//b/AgAAAAAAAAD8//b/AgAAAAAAAAD9//b/AgAAAAAAAAA=")
 tile_set = ExtResource("2_01y1d")
 
-[node name="bed" type="TileMapLayer" parent="layer_holder"]
-tile_map_data = PackedByteArray("AAD+//3/AAAAAAAAAAD///3/AAAAAAAAAAA=")
-tile_set = SubResource("TileSet_q6r6c")
-
 [node name="bookshelf" type="TileMapLayer" parent="layer_holder"]
 tile_map_data = PackedByteArray("AAD4//r/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_ir8iy")
+
+[node name="cactus" type="TileMapLayer" parent="layer_holder"]
+scale = Vector2(1.0000002, 1.0000002)
+tile_map_data = PackedByteArray("AAD8//z/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_0f4jx")
+
+[node name="bed" type="TileMapLayer" parent="layer_holder"]
+tile_map_data = PackedByteArray("AAD+//3/AAAAAAAAAAD///3/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_q6r6c")
 
 [node name="sign" type="TileMapLayer" parent="layer_holder"]
 tile_map_data = PackedByteArray("AAD4////AAAAAAAAAAA=")
@@ -247,6 +291,15 @@ tile_set = SubResource("TileSet_hqns4")
 [node name="extinguish" type="TileMapLayer" parent="layer_holder"]
 tile_map_data = PackedByteArray("AAD6//7/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_mb7s7")
+
+[node name="table" type="TileMapLayer" parent="layer_holder"]
+scale = Vector2(1.0000001, 1.0000001)
+tile_map_data = PackedByteArray("AAABAP3/AAAAAAEAAAA=")
+tile_set = SubResource("TileSet_l46xq")
+
+[node name="plant" type="TileMapLayer" parent="layer_holder"]
+tile_map_data = PackedByteArray("AAACAP3/AAAAAAEAAAA=")
+tile_set = SubResource("TileSet_kbdc6")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

@@ -60,3 +60,36 @@ func _on_button_4_pressed() -> void: #fire extinguisher purchase
 			e.amount_of_furniture += 1
 		elif e.money <= 800:
 			play_too_broke_animation()
+
+
+func _on_button_5_pressed() -> void: #cactus plant purchase
+	click.play()
+	if e.bought_bed and not e.bought_cactus:
+		if e.money >= 1000:
+			e.money -= 1000
+			e.add_cactus = true
+			e.amount_of_furniture += 1
+		elif e.money <= 1000:
+			play_too_broke_animation()
+
+
+func _on_button_6_pressed() -> void: #other plant purchase
+	click.play()
+	if e.bought_bed and not e.bought_plant:
+		if e.money >= 1300:
+			e.money -= 1300
+			e.add_plant = true
+			e.amount_of_furniture += 1
+		elif e.money <= 1300:
+			play_too_broke_animation()
+
+
+func _on_button_7_pressed() -> void: #bedside table purchase
+	click.play()
+	if e.bought_bed and not e.bought_table:
+		if e.money >= 600:
+			e.money -= 600
+			e.add_table = true
+			e.amount_of_furniture += 1
+		elif e.money <= 600:
+			play_too_broke_animation()

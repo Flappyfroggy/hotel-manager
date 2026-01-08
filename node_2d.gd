@@ -7,6 +7,10 @@ extends Node2D
 @onready var animation = $AnimationPlayer
 @onready var tutorial_pt1 = $animation
 @onready var tutorial_pt2 = $animation_pt2
+@onready var cactus = $layer_holder/cactus
+@onready var table = $layer_holder/table
+@onready var plant = $layer_holder/plant
+
 func _ready():
 	if not e.bought_bed:
 		bed.hide()
@@ -16,6 +20,12 @@ func _ready():
 		sign.hide()
 	if not e.bought_fire_extinguisher:
 		fire_extinguisher.hide()
+	if not e.bought_cactus:
+		cactus.hide()
+	if not e.bought_plant:
+		plant.hide()
+	if not e.bought_table:
+		table.hide()
 func _process(_float) -> void:
 	if e.add_bed and not e.bought_bed:
 		bed.show()
@@ -34,6 +44,15 @@ func _process(_float) -> void:
 	if e.add_fire_extinguisher and not e.bought_fire_extinguisher:
 		e.bought_fire_extinguisher = true
 		fire_extinguisher.show()
+	if e.add_cactus and not e.bought_cactus:
+		e.bought_cactus = true
+		cactus.show()
+	if e.add_plant and not e.bought_plant:
+		plant.show()
+		e.bought_plant = true
+	if e.add_table and not e.bought_table:
+		table.show()
+		e.bought_table = true
 	if e.transition2_finish:
 		e.transition2_finish = false
 		if e.tutorial:
