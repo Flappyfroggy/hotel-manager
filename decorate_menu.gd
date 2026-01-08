@@ -93,3 +93,14 @@ func _on_button_7_pressed() -> void: #bedside table purchase
 			e.amount_of_furniture += 1
 		elif e.money <= 600:
 			play_too_broke_animation()
+
+
+func _on_button_8_pressed() -> void: #rug purchase
+	click.play()
+	if e.bought_bed and not e.bought_rug:
+		if e.money >= 900:
+			e.money -= 900
+			e.add_rug = true
+			e.amount_of_furniture += 1
+		elif e.money <= 900:
+			play_too_broke_animation()

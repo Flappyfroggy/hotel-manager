@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b1ugpoiu1yxhi"]
+[gd_scene load_steps=15 format=3 uid="uid://b1ugpoiu1yxhi"]
 
 [ext_resource type="Script" uid="uid://d2gvgywp2kmmb" path="res://decorate_menu.gd" id="1_2pxhd"]
 [ext_resource type="Texture2D" uid="uid://dyi8exq5vc85k" path="res://assets/bed_tile.png" id="1_x4i3i"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cgjlt83knfvnu" path="res://assets/cactusplant.png" id="7_ch6gu"]
 [ext_resource type="Texture2D" uid="uid://h7jiq8e7tfoe" path="res://assets/plant1.png" id="9_a51ej"]
 [ext_resource type="Texture2D" uid="uid://dqc861llbxmqm" path="res://assets/bedside_table.png" id="10_litbx"]
+[ext_resource type="Texture2D" uid="uid://bidqagjlfiyok" path="res://assets/rug.png" id="11_a51ej"]
 
 [sub_resource type="Animation" id="Animation_3xt5y"]
 length = 0.001
@@ -302,6 +303,19 @@ position = Vector2(259, 440)
 scale = Vector2(2.9843755, 2.6874998)
 texture = ExtResource("10_litbx")
 
+[node name="Button8" type="Button" parent="."]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 529.0
+offset_right = 491.0
+offset_bottom = 585.0
+theme = ExtResource("6_3xt5y")
+text = "$900"
+
+[node name="rug" type="Sprite2D" parent="."]
+position = Vector2(417, 478)
+texture = ExtResource("11_a51ej")
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
@@ -310,3 +324,4 @@ texture = ExtResource("10_litbx")
 [connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
 [connection signal="pressed" from="Button6" to="." method="_on_button_6_pressed"]
 [connection signal="pressed" from="Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="Button8" to="." method="_on_button_8_pressed"]

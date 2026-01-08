@@ -44,6 +44,8 @@ var bought_plant := false
 var add_plant := false
 var bought_table := false
 var add_table := false
+var bought_rug := false
+var add_rug := false
 func fish():
 	get_tree().change_scene_to_file("res://hotel_intro.tscn")
 func to_hotel_outside():

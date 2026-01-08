@@ -10,6 +10,7 @@ extends Node2D
 @onready var cactus = $layer_holder/cactus
 @onready var table = $layer_holder/table
 @onready var plant = $layer_holder/plant
+@onready var rug = $layer_holder/rug
 
 func _ready():
 	if not e.bought_bed:
@@ -26,6 +27,8 @@ func _ready():
 		plant.hide()
 	if not e.bought_table:
 		table.hide()
+	if not e.bought_rug:
+		rug.hide()
 func _process(_float) -> void:
 	if e.add_bed and not e.bought_bed:
 		bed.show()
@@ -53,6 +56,9 @@ func _process(_float) -> void:
 	if e.add_table and not e.bought_table:
 		table.show()
 		e.bought_table = true
+	if e.add_rug and not e.bought_rug:
+		rug.show()
+		e.bought_rug = true
 	if e.transition2_finish:
 		e.transition2_finish = false
 		if e.tutorial:

@@ -1,9 +1,10 @@
-[gd_scene load_steps=33 format=4 uid="uid://d4dwk6imlb8c0"]
+[gd_scene load_steps=36 format=4 uid="uid://d4dwk6imlb8c0"]
 
 [ext_resource type="Texture2D" uid="uid://c6tahyfpx1c1y" path="res://assets/sky.png" id="1_0e48y"]
 [ext_resource type="Script" uid="uid://dcodpfkp74mft" path="res://node_2d.gd" id="1_q6r6c"]
 [ext_resource type="TileSet" uid="uid://ljej2g64q7vb" path="res://assets/tile.tres" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://dyi8exq5vc85k" path="res://assets/bed_tile.png" id="3_epypp"]
+[ext_resource type="Texture2D" uid="uid://bidqagjlfiyok" path="res://assets/rug.png" id="4_d2bti"]
 [ext_resource type="PackedScene" uid="uid://b1ugpoiu1yxhi" path="res://decorate_menu.tscn" id="5_kdubu"]
 [ext_resource type="Texture2D" uid="uid://cgjlt83knfvnu" path="res://assets/cactusplant.png" id="5_nr8wp"]
 [ext_resource type="Texture2D" uid="uid://iv5ow3gwreef" path="res://assets/bookshelf.png" id="5_rj586"]
@@ -14,6 +15,18 @@
 [ext_resource type="Texture2D" uid="uid://dqc861llbxmqm" path="res://assets/bedside_table.png" id="9_d2bti"]
 [ext_resource type="PackedScene" uid="uid://d0ixdf70ovu43" path="res://transition_pt_1.tscn" id="10_ir8iy"]
 [ext_resource type="Texture2D" uid="uid://h7jiq8e7tfoe" path="res://assets/plant1.png" id="10_ta5nu"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_flf07"]
+texture = ExtResource("4_d2bti")
+texture_region_size = Vector2i(96, 96)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_rjqkl"]
+tile_shape = 1
+tile_layout = 5
+tile_offset_axis = 1
+tile_size = Vector2i(32, 16)
+sources/0 = SubResource("TileSetAtlasSource_flf07")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4d7sh"]
 texture = ExtResource("5_rj586")
@@ -254,6 +267,11 @@ scale = Vector2(1.7, 1.7)
 [node name="floor" type="TileMapLayer" parent="layer_holder"]
 tile_map_data = PackedByteArray("AAD//wAAAgAAAAEAAAD//wEAAgAAAAEAAAAAAAEAAgAAAAEAAAD//wIAAgAAAAEAAAAAAAIAAgAAAAEAAAD//wMAAgAAAAEAAAAAAAMAAgAAAAEAAAABAAMAAgAAAAEAAAABAAIAAgAAAAEAAAABAAEAAgAAAAEAAAAAAAAAAgAAAAEAAAABAAAAAgAAAAEAAAACAAEAAgAAAAEAAAACAAIAAgAAAAEAAAACAAMAAgAAAAEAAAACAAAAAgAAAAEAAAD//wQAAgAAAAEAAAAAAAQAAgAAAAEAAAABAAQAAgAAAAEAAAACAAQAAgAAAAEAAAADAAQAAgAAAAEAAAADAAMAAgAAAAEAAAADAAIAAgAAAAEAAAADAAEAAgAAAAEAAAADAAAAAgAAAAEAAAD+////AgAAAAEAAAD+/wAAAgAAAAEAAAD/////AgAAAAEAAAAAAP//AgAAAAEAAAABAP//AgAAAAEAAAACAP//AgAAAAEAAAADAP//AgAAAAEAAAD+/wEAAgAAAAEAAAD+/wIAAgAAAAEAAAD+/wMAAgAAAAEAAAD+/wQAAgAAAAEAAAD9/wQAAgAAAAEAAAD9/wMAAgAAAAEAAAD9/wIAAgAAAAEAAAD9/wEAAgAAAAEAAAD9/wAAAgAAAAEAAAD9////AgAAAAEAAAD9//7/AgAAAAEAAAD+//7/AgAAAAEAAAD///7/AgAAAAEAAAAAAP7/AgAAAAEAAAABAP7/AgAAAAEAAAACAP7/AgAAAAEAAAADAP7/AgAAAAEAAAD8//3/AgAAAAEAAAD8//7/AgAAAAEAAAD8////AgAAAAEAAAD8/wAAAgAAAAEAAAD8/wEAAgAAAAEAAAD8/wIAAgAAAAEAAAD8/wMAAgAAAAEAAAD8/wQAAgAAAAEAAAD9//3/AgAAAAEAAAD+//3/AgAAAAEAAAD///3/AgAAAAEAAAAAAP3/AgAAAAEAAAABAP3/AgAAAAEAAAADAP3/AgAAAAEAAAACAP3/AgAAAAEAAAD7//z/AgAAAAEAAAD7//3/AgAAAAEAAAD7//7/AgAAAAEAAAD7////AgAAAAEAAAD7/wAAAgAAAAEAAAD7/wEAAgAAAAEAAAD7/wIAAgAAAAEAAAD7/wMAAgAAAAEAAAD7/wQAAgAAAAEAAAD8//z/AgAAAAEAAAD9//z/AgAAAAEAAAD+//z/AgAAAAEAAAD///z/AgAAAAEAAAAAAPz/AgAAAAEAAAABAPz/AgAAAAEAAAACAPz/AgAAAAEAAAADAPz/AgAAAAEAAAA=")
 tile_set = ExtResource("1_wtcfe")
+
+[node name="rug" type="TileMapLayer" parent="layer_holder"]
+scale = Vector2(1.0000002, 1.0000002)
+tile_map_data = PackedByteArray("AAD///7/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_rjqkl")
 
 [node name="walllayer1" type="TileMapLayer" parent="layer_holder"]
 tile_map_data = PackedByteArray("AAD6//v/AgAAAAAAAAD6//z/AgAAAAAAAAD6//3/AgAAAAAAAAD6//7/AgAAAAAAAAD6////AgAAAAAAAAD6/wAAAgAAAAAAAAD6/wEAAgAAAAAAAAD6/wIAAgAAAAAAAAD6/wMAAgAAAAAAAAD7//v/AgAAAAAAAAD8//v/AgAAAAAAAAD9//v/AgAAAAAAAAD+//v/AgAAAAAAAAD///v/AgAAAAAAAAAAAPv/AgAAAAAAAAABAPv/AgAAAAAAAAACAPv/AgAAAAAAAAA=")
