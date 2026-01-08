@@ -1,1 +1,1 @@
-a hotel maagement sim
+a hotel management simulation game made in godot!
